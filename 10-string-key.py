@@ -9,24 +9,15 @@ class HashTable(object):
     def store(self, string):
         """Input a string that's stored in 
         the table."""
-        a = str(ord(string[0]))
-        b = str(ord(string[1]))
-        hash = int(a + b)
+        hash = self.calculate_hash_value(string)
         hash_index = hash - 1
-
         self.table[hash_index] = {hash:string}
-
-
 
     def lookup(self, string):
         """Return the hash value if the
         string is already in the table.
         Return -1 otherwise."""
-        a = str(ord(string[0]))
-        b = str(ord(string[1]))
-        hash = int(a + b)
-        hash_index = hash - 1
-
+        hash = self.calculate_hash_value(string)
         for item in self.table:
             try:
                 x = item[hash]
@@ -41,7 +32,6 @@ class HashTable(object):
         a = str(ord(string[0]))
         b = str(ord(string[1]))
         hash = int(a + b)
-
         return hash
     
 # Setup
