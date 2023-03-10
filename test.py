@@ -1,27 +1,24 @@
+string = "UDACITY"
 
+a = str(ord(string[0]))
+b = str(ord(string[1]))
+c = int(a + b)
 
+print(c)
 
-def half_round_up(value):
-    if value % 2 == 1:
-        return int((value / 2) + 0.5)
-    else:
-        return int(value / 2)
+table = [None]*10
 
+print(table)
+p = "pee"
+po = 99
+table[1] = {p:po}
 
+print(table)
+x = 0
+for item in table:
+    try:
+        x = item['pee']
+        print(x)
+    except:
+        pass
 
-
-
-# 2 2 3 3 4 4
-
-test_list = [0,1,2,3,4,5,6]
-
-print(len(test_list))
-
-print(half_round_up(7))
-
-
-print(test_list[4])
-
-
-test_list = test_list[:4]
-print(test_list)
