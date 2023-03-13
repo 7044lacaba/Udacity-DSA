@@ -9,30 +9,25 @@ class BST(object):
         self.root = Node(root)
 
     def insert(self, new_val):
-        
+        n = Node(new_val)
         current = self.root
-
-        if new_val > current.value:
-
-            # check if any values right side
-            # if current.right = None 
-            #   current.right = new_val
-            #   break
-            # else current = current.right
-
-            pass
-
-        elif new_val < current.value:
-
-            # check if any values left side
-            # if current.left = None 
-            #   current.left = new_val
-            #   break
-            # else current = current.left
-            pass
-
-        else:
-            pass
+        while True:
+            if n.value > current.value:
+                # check if any values right side
+                if current.right == None:
+                   current.right = n
+                   break
+                else:
+                    current = current.right
+            elif n.value < current.value:
+                # check if any values left side
+                if current.left == None: 
+                   current.left = n
+                   break
+                else:
+                    current = current.left
+            else:
+                break
 
     def search(self, find_val):
         return False
