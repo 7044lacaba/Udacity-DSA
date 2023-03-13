@@ -1,24 +1,14 @@
-string = "UDACITY"
+class Node(object):
+    def __init__(self, value):
+        self.value = value
+        self.left = None
+        self.right = None
 
-a = str(ord(string[0]))
-b = str(ord(string[1]))
-c = int(a + b)
 
-print(c)
 
-table = [None]*10
+# Set up tree
+start = Node(4)
+start.left = Node(2)
 
-print(table)
-p = "pee"
-po = 99
-table[1] = {p:po}
-
-print(table)
-x = 0
-for item in table:
-    try:
-        x = item['pee']
-        print(x)
-    except:
-        pass
-
+print(start.right)
+print(start.right.value)
