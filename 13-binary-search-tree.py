@@ -30,6 +30,22 @@ class BST(object):
                 break
 
     def search(self, find_val):
+        current = self.root
+        while True:
+            if find_val < current.value:
+                if current.left == None:
+                    break
+                else:
+                    current = current.left
+            elif find_val > current.value:
+                if current.right == None:
+                    break
+                else:
+                    current = current.right
+            else:
+                return True
+
+
         return False
   
 # Set up tree
