@@ -10,5 +10,12 @@ class Node(object):
 start = Node(4)
 start.left = Node(2)
 
-print(start.right)
-print(start.right.value)
+a = "hello"
+b = "my"
+c = "name"
+
+list = (a, b, c)
+
+
+
+print(list)
